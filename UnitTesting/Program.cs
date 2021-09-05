@@ -2,21 +2,15 @@
 
 namespace UnitTesting
 {
-    class Program
-    {
-
-        public class VendingMachine
+   
+  public class DayOfWeek
         {
-           
-            public VendingMachine()
+            
+            public static void Days(int month, int day, int year)
             {
-                Console.WriteLine("Enter money amount:");
-                int money = Convert.ToInt32(Console.ReadLine());
-                int[] notes = new int[] { 1, 2, 5, 10, 50, 500, 1000 };
-                int length = notes.Length;
-                Utility utility = new Utility();
-                Console.WriteLine("Minimum Notes= " + utility.MinNotes(notes, length, money));
+                string[] days = { "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" };
+                int dayIndex = Utility.Days(month, day, year);
+                Console.WriteLine("day= " + days[dayIndex]);
             }
         }
     }
-}
