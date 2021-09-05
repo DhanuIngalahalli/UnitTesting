@@ -3,22 +3,18 @@
     using System;
 
     
-    /// this is class MonthlyPayment
-    
-    public class MonthlyPayment
+    /// this is class SquareRoot
+   
+    public class SquareRoot
     {
-        /// <summary>
-        /// Payments the specified argument1.
-        /// </summary>
-        /// <param name="argument1">The argument1.</param>
-        /// <param name="argument2">The argument2.</param>
-        /// <param name="argument3">The argument3.</param>
-        public static void Payments(string argument1, string argument2, string argument3)
+       
+        /// SQRT is the instance of class.
+       
+        public static void Sqrt()
         {
-            double principalLoan = Convert.ToDouble(argument1);
-            double year = Convert.ToDouble(argument2);
-            double percentInterest = Convert.ToDouble(argument3);
-            Console.WriteLine("Monthly Payments: " + Utility.MonthlyPayment(principalLoan, year, percentInterest));
+            Console.WriteLine("Enter input for Square Roots:");
+            double input = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Approx Square Root:" + Utility.Sqrt(input));
         }
     }
 }
