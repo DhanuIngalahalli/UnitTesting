@@ -2,19 +2,28 @@
 {
     using System;
 
-    
+
     /// this is class SquareRoot
-   
-    public class SquareRoot
+
+    public class BinaryConversion
     {
-       
-        /// SQRT is the instance of class.
-       
-        public static void Sqrt()
+        /// <summary>
+        /// Converts to binary.
+        /// </summary>
+        public static void ToBinary()
         {
-            Console.WriteLine("Enter input for Square Roots:");
-            double input = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Approx Square Root:" + Utility.Sqrt(input));
+            Console.WriteLine("Enter input for conversion of binary:");
+            int input = Convert.ToInt32(Console.ReadLine());
+            string binary = Utility.ToBinary(input);
+            Console.WriteLine("Binary value:" + binary);
+
+            string string1 = binary.Substring(0, binary.Length / 2);
+            string string2 = binary.Substring(binary.Length / 2, binary.Length - (binary.Length / 2));
+            Console.WriteLine(string1);
+            Console.WriteLine(string2);
+            Console.WriteLine(Convert.ToInt32(string2 + string1));
+            double newBinay = Utility.ToDecimal(Convert.ToInt32(string2 + string1));
+            Console.WriteLine("After Swapping nibble the new value: " + newBinay);
         }
     }
 }
