@@ -1,30 +1,24 @@
-﻿using System;
-
-    namespace Temp_conv
-{ 
-    public class TemperatureConversion
+﻿namespace JUnitPrograms
 {
+    using System;
+
     
-    public static void Conversion()
+    /// this is class MonthlyPayment
+    
+    public class MonthlyPayment
     {
-        Console.WriteLine("\nEnter your option:\n1.Celsius To Fahrenheit\n2.Fahrenheit To Celsius");
-        int option = Convert.ToInt32(Console.ReadLine());
-        switch (option)
+        /// <summary>
+        /// Payments the specified argument1.
+        /// </summary>
+        /// <param name="argument1">The argument1.</param>
+        /// <param name="argument2">The argument2.</param>
+        /// <param name="argument3">The argument3.</param>
+        public static void Payments(string argument1, string argument2, string argument3)
         {
-            case 1:
-                Console.WriteLine("Enter value in Celsius:");
-                double celsius = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Celsius To Fahrenheit: " + Utility.CelsiusToFahrenheit(celsius));
-                break;
-            case 2:
-                Console.WriteLine("Enter value in Fahrenheit:");
-                double fahrenheit = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Fahrenheit To Celsius: " + Utility.FahrenheitToCelsius(fahrenheit));
-                break;
-            default:
-                Console.WriteLine("Wrong option!!!");
-                break;
+            double principalLoan = Convert.ToDouble(argument1);
+            double year = Convert.ToDouble(argument2);
+            double percentInterest = Convert.ToDouble(argument3);
+            Console.WriteLine("Monthly Payments: " + Utility.MonthlyPayment(principalLoan, year, percentInterest));
         }
     }
-}
 }
